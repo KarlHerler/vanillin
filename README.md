@@ -19,5 +19,5 @@ is also included so running: `make` will also build the software
 
 ## Dependencies
 
- - [discord](https://crates.io/crates/discord) - A library for interracting with the Discord API (please note that this project has external dependencies which need to be satisfied)
+ - [discord](https://crates.io/crates/discord) - A library for interacting with the Discord API (please note that this project has external dependencies which need to be satisfied)
  - [hyper](https://crates.io/crates/hyper)     - A http client (and server) library. Used to look up the correct thing from vanillagaming
