@@ -1,0 +1,10 @@
+[package]
+name = "vanillagaming_linker"
+version = "0.1.0"
+authors = ["Karl Herler <hi@karlherler.com>"]
+
+[dependencies]
+discord = "0.8.0"
+futures = "0.1.14"
+hyper = "0.11.1"
+tokio-core = "0.1.8"
