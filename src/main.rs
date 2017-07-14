@@ -29,7 +29,7 @@ fn main() {
       Ok(Event::MessageCreate(message)) => {
         let split_message: Vec<&str> = message.content.splitn(2, ' ').collect();
         //println!("{} says: {} or: {:?}", message.author.name, message.content, split_message); // lets not log everything people are saying in the chat
-        if split_message[0] == "!vg" || message.content == "!vanillagaming" || message.content == "!vanillin" {
+        if split_message[0] == "!vg" || split_message[0] == "!vanillagaming" || split_message[0] == "!vanillin" {
           if split_message.len()>1 {
             let _ = discord.send_message(message.channel_id, &(vg_result_to_string(vanillagaming::find(split_message[1]))), "", false);
           } else {
