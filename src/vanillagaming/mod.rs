@@ -1,11 +1,5 @@
-// vanillagaming curler
-// do curl http://db.vanillagaming.org/?search=[urlencodded thing]
-// if response is 302, use link
-// if 200 check if nothing found, return "nothing found, sorry"
-// if 200 check if many things found, return that
-use std::io::{self, Write};
 use std::string::String;
-use futures::{Future, Stream, IntoFuture};
+use futures::{Future, Stream};
 use futures::future;
 use hyper::{Client, Request, Method, Error};
 use tokio_core::reactor::Core;
