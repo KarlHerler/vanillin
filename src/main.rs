@@ -33,7 +33,7 @@ fn main() {
           if split_message.len()>1 {
             let _ = discord.send_message(message.channel_id, &(vg_result_to_string(vanillagaming::find(split_message[1]))), "", false);
           } else {
-            let _ = discord.send_message(message.channel_id, &("I'm sorry ".to_string() + &message.author.name + &", I didn't quite understand that"), "", false);
+            let _ = discord.send_message(message.channel_id, "I'm sorry, I didn't quite understand that", "", false);
           }
         } else if split_message[0] == "!heywire" {
           println!("Quitting.");
