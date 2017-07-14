@@ -35,7 +35,8 @@ fn main() {
           } else {
             let _ = discord.send_message(message.channel_id, "I'm sorry, I didn't quite understand that", "", false);
           }
-        } else if split_message[0] == "!heywire" {
+        } else if split_message[0] == "!haywire" {
+          let _ = discord.send_message(message.channel_id, "Ok, pulling the plug", "", false);
           println!("Quitting.");
           break
         }
