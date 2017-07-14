@@ -11,6 +11,10 @@ use hyper::{Client, Request, Method, Error};
 use tokio_core::reactor::Core;
 
 
+/// Public: Find searches db.vanillagaming.org for the input, if we get a 302 redirect
+/// We know we've matched precisely with one thing and return the direct link in the "Location"
+/// header (the destination of the redirect). If we did not get a 302 we see if the body
+/// is a set of multiple items (search results) or a "No results found" and return appropriately
 pub fn find(thing: &str) -> Option<String> {
   println!("Vanillagaming::find called with: {}", thing);
   let origin = "http://db.vanillagaming.org/";
@@ -40,7 +44,7 @@ pub fn find(thing: &str) -> Option<String> {
       }
     };
 
-    // Ok we didn't get any precice match so we do some more investigation of what we have
+    // Ok we didn't get any precise match so we do some more investigation of what we have
     res.body().fold(Vec::new(), |mut v, chunk| {
       // translate the chunks into a vector of chunks
       v.extend(&chunk[..]);
