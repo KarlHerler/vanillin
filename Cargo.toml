@@ -1,7 +1,9 @@
 [package]
-name = "vanillagaming_linker"
+name = "vanillin"
 version = "0.1.0"
 authors = ["Karl Herler <hi@karlherler.com>"]
+repository = "https://github.com/KarlHerler/vanillin.git"
+license = "MIT"
 
 [dependencies]
 discord = "0.8.0"
